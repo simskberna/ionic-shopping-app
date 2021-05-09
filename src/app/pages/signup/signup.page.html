@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+  <div class="container">
+    <div class="card card-container">
+
+
+      <form class="form-signin" #loginForm="ngForm" (ngSubmit)="signUp(loginForm)">
+
+        <ion-item>
+          <ion-label position="floating">Username</ion-label>
+          <ion-input type="text" required name="username" value="username" ngModel autofocus></ion-input>
+        </ion-item>
+      <br>
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input type="text" required name="first_name" value="first_name" ngModel autofocus></ion-input>
+      </ion-item>
+    <br>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" required name="email" value="email" ngModel autofocus></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" required name="password" value="password" ngModel></ion-input>
+        </ion-item>
+        <br>
+        <div id="remember" class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <br>
+        <button class="btn btn-lg btn-primary btn-block btn-signin"
+                type="submit"
+                [disabled]="loginForm.invalid || loginForm.pending">Sign up</button>
+        <a href="/login">
+        Login</a>
+
+      </form>
+
+    </div>
+  </div>
+
+
+</ion-content>

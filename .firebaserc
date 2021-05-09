@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "myecommerce-7fba6": {
+      "hosting": {
+        "app": [
+          "myecommerce-7fba6"
+        ]
+      }
+    }
+  }
+}
